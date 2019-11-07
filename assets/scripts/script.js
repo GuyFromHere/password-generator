@@ -23,7 +23,6 @@ function generatePassword(length) {
   ];
 
   // Get password criteria based on user input
-  // Store in one long string
   for (var i = 0; i < criteriaArr.length; i++) {
     if (getCriteria(criteriaArr[i])) {
       criteria += chars[i];
@@ -34,4 +33,12 @@ function generatePassword(length) {
     password += criteria[getRandom(0, criteria.length)];
   }
   document.getElementById("passwordText").innerHTML = password;
+}
+
+function clipPassword() {
+  var password = document.getElementById("passwordText");
+  password.select();
+  password.setSelectionRange(0, 99999);
+
+  document.execCommand("copy");
 }
