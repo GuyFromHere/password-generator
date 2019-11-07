@@ -1,48 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Password Generator</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
 
-		<script type="text/javascript" src="assets/scripts/script.js"></script>
-		<link type="text/css" href="assets/css/styles.css" />
-	</head>
-	<body>
-		<header><h1>Password Generator</h1></header>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+    <link type="text/css" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header><h1>Password Generator</h1></header>
 
-		<main>
-			<form action="javascript:alert('got it')">
-				<div id="inputForm">
-					<div id="formHeader">
-						<h2>Generate A Password</h2>
-					</div>
-					<div id="formMain">
-						<input
-							type="checkbox"
-							class="passwordOption"
-							value="LowerCase"
-						/>Lower Case <br />
-						<input
-							type="checkbox"
-							class="passwordOption"
-							value="UpperCase"
-						/>Upper Case<br />
-						<input
-							type="checkbox"
-							class="passwordOption"
-							value="Special Char"
-						/>Special Characters<br />
-						<input
-							type="checkbox"
-							class="passwordOption"
-							value="Numbers"
-						/>Numbers<br />
-						<input type="submit" />
-					</div>
-				</div>
-			</form>
-		</main>
-	</body>
+    <main>
+      <div class="header">
+        <h1>Generate a password</h1>
+      </div>
+      <div class="main">
+        <div class="borderBox">
+          <h2>Your new password:</h2>
+          <textarea id="passwordText"></textarea><br />
+          <input
+            type="button"
+            onclick="generatePassword(16);"
+            value="Get password!"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
