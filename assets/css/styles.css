@@ -1,11 +1,64 @@
 body {
-  background: lightblue;
-  text-align: center;
+	background: #ffffff;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .borderBox {
-  border: 1px solid black;
-  width: 50%;
-  margin: 0 auto;
-  padding: 30px;
+	border: 2px solid gainsboro;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+	width: 50%;
+	margin: 0 auto;
+	padding: 30px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.borderBox h2 {
+	padding-bottom: 15px;
+	border-bottom: 2px solid gainsboro;
+	text-align: left;
+}
+
+textarea {
+	border: 3px dashed gainsboro;
+	margin: 0 0 15px 0;
+	text-align: center;
+	width: 100%;
+}
+
+textarea,
+input {
+	font-size: 20px;
+}
+
+#buttons {
+	border-top: 2px solid gainsboro;
+	padding-top: 10px;
+}
+
+#buttonGetPassword {
+	float: left;
+	background-color: red;
+	border-radius: 28px;
+	border: 1px solid red;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 16px 31px;
+	text-decoration: none;
+}
+
+#buttonClipboard {
+	float: right;
+	background-color: gainsboro;
+	border-radius: 28px;
+	border: 1px solid gainsboro;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 16px 31px;
+	text-decoration: none;
 }
