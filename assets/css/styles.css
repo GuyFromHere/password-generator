@@ -52,13 +52,31 @@ input {
 
 #buttonClipboard {
 	float: right;
-	background-color: gainsboro;
+	background-color: #898989;
 	border-radius: 28px;
-	border: 1px solid gainsboro;
+	border: 1px solid #898989;
 	display: inline-block;
 	cursor: pointer;
 	color: #ffffff;
 	font-size: 20px;
 	padding: 16px 31px;
 	text-decoration: none;
+}
+
+@media (max-width: 640px) {
+	#buttons {
+		text-align: center;
+	}
+
+	#buttonGetPassword {
+		width: 100%;
+		font-size: 18px;
+		margin-top: 5px;
+	}
+
+	#buttonClipboard {
+		width: 100%;
+		font-size: 18px;
+		margin-top: 5px;
+	}
 }
