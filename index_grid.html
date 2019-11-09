@@ -21,6 +21,37 @@
 					placeholder="Your Secure Password"
 					rows="5"
 				></textarea>
+				<!-- Modal Div -->
+				<div id="optionsModal">
+					<!-- Modal contents -->
+					<h2>
+						How many characters should the password be?
+					</h2>
+					<h3>Enter a number between 8 and 128.</h3>
+					<input type="text" id="modalLength" />
+					<h2>
+						Select at least one character type for your password:
+					</h2>
+					<input type="radio" name="modalRadio" value="lower" />Lower
+					Case <br />
+					<input type="radio" name="modalRadio" value="upper" />Upper
+					Case <br />
+					<input
+						type="radio"
+						name="modalRadio"
+						value="number"
+					/>Numbers<br />
+					<input
+						type="radio"
+						name="modalRadio"
+						value="special"
+					/>Special Characters<br />
+					<input
+						type="button"
+						onclick="generatePasswordModal();"
+						value="Submit"
+					/>
+				</div>
 				<div id="buttons row">
 					<input
 						type="button"

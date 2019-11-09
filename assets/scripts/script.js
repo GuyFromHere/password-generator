@@ -15,7 +15,6 @@ function getLength() {
 
 function getCriteria(type) {
 	var criteria = prompt('Use ' + type + '? Y or N');
-	// validation here...
 	criteria = criteria.toLowerCase();
 	if (criteria === 'y') return true;
 	else return false;
@@ -37,10 +36,14 @@ function generatePassword() {
 
 	let pwLength = getLength();
 
-	// Get password criteria based on user input
 	for (var i = 0; i < criteriaArr.length; i++) {
 		if (getCriteria(criteriaArr[i])) {
 			criteria += chars[i];
+		}
+		// prettier-ignore
+		if (i === 3 && criteria.length === 0) {
+			alert('You must select at least one character type. Try again!');
+			i = -1;
 		}
 	}
 
