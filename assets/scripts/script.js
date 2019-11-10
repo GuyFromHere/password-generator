@@ -1,4 +1,10 @@
 var criteriaArr = ['numbers', 'special characters', 'lower case', 'upper case'];
+var chars = [
+	'0123456789',
+	'!"#$%&\'()*+,-./:;<=>?@[]^_`{|}~',
+	'abcdefghijklmnopqrstuvwxyz',
+	'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+];
 
 function getLength() {
 	let pwLength = prompt(
@@ -27,14 +33,7 @@ function getRandom(min, max) {
 function generatePassword() {
 	var criteria = '';
 	var password = '';
-	var chars = [
-		'0123456789',
-		'!"#$%&\'()*+,-./:;<=>?@[]^_`{|}~',
-		'abcdefghijklmnopqrstuvwxyz',
-		'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-	];
-
-	let pwLength = getLength();
+	var pwLength = getLength();
 
 	for (var i = 0; i < criteriaArr.length; i++) {
 		if (getCriteria(criteriaArr[i])) {
@@ -51,7 +50,7 @@ function generatePassword() {
 	for (var x = 0; x < pwLength; x++) {
 		password += criteria[getRandom(0, criteria.length)];
 	}
-	document.getElementById('passwordText').innerHTML = password;
+	document.getElementById('passwordText').textContent = password;
 }
 
 function clipPassword() {
